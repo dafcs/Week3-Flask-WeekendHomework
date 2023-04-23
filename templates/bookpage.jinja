@@ -1,0 +1,23 @@
+{% extends 'main.jinja'%}
+
+{% block bookpage %}
+<div class="bookinfo">
+    <h1>{{book.title}}</h1>
+    <div class="container">
+        <div class="bookimgdiv">
+            <img class="bookimg" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Placeholder_book.svg" alt="book cover">
+            <textarea>Description: {{book.description}}</textarea>
+        </div>
+        <div class="book-details">
+            <p>Author: {{book.author}}</p>
+            <p>Genre: {{book.genre}} </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+

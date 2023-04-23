@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap');
+
+/* HEADER @ main.jinja*/
+
+* {
+    font-family: "Montserrat",sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+#logoname {
+    font-size: larger;
+    text-decoration:overline underline;
+}
+
+li,a,button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #ecf0f1;
+    text-decoration: None;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    padding: 3px;
+    border-radius: 8px;
+    background-color: #0088a9;
+}
+
+/* Add book to library form @ homepage.jinja */
+.addbook-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 15px;
+
+}
+.addbook-container h3 {
+    border: 1px solid rgba(0,136,169,0.8);
+    border-radius: 8px;
+    text-decoration-line: underline;
+    text-align: center;
+    color: white;
+}
+
+.form-inline {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    color: white;
+}
+.form-inline input {
+    height: 1.5rem;
+    color: white;
+    border: 0.5px solid white;
+    border-radius: 4px;
+
+
+}
+.form-inline label {
+
+    color: white;
+
+}
+.form-inline textarea {
+    width: auto;
+    height: auto;
+    border: 1px thin;
+}
+
+#sub-button {
+    padding: 2.5px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#sub-button:hover {
+    border-color: teal;
+    border: thin;
+    /* background-color: rgba(0,136,169,0.8); */
+}
+
+#desc {
+    color: white;
+    width: auto;
+    height: 4rem;
+}
+
+
+/* All Books @ homepage.jinja */
+
+.allbooks-list {
+    display: flex;
+    flex-direction: column;
+}
+.allbooks-list h3 {
+    border: 1px solid rgba(0,136,169,0.8);
+    border-radius: 8px;
+    text-decoration-line: underline;
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.mylist h3 {
+    border: 1px solid rgba(0,136,169,0.8);
+    border-radius: 8px;
+    text-decoration-line: underline;
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.book {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid white;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: white;
+    gap: 1rem;
+}
+
+.book:hover {
+    border-color: teal;
+}
+
+.book-form button{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 0.5px solid white;
+    border-radius: 8px;
+    width: 13rem;
+    margin: 10px;
+}
+
+.book-form button:hover{
+    background-color: teal;
+  }
+
+.book p a {
+    color: whitesmoke;
+    text-decoration:underline overline;
+}
+.book p a:hover {
+    color: teal;
+}
+.bookimg {
+    flex-shrink: 0;
+    width: 70px;
+    height: 100px;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.book-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.book-form {
+    margin-left: auto;
+}
+
+/* book page */
+.bookinfo h1 {
+    border: 1px solid rgba(0,136,169,0.8);
+    border-radius: 8px;
+    text-decoration-line: underline;
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.book-details {
+    display: flex;
+    text-align: center;
+    justify-content:space-evenly;
+    color: white;
+}
+.container {
+    display: flex;
+    margin: 30px 30px;
+    flex-direction: column;
+}
+.bookimgdiv {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.bookimgdiv img {
+    align-self: center;
+    width: 200px;
+    height: 250px;
+}
+.container textarea {
+    color: white;
+    padding: 2rem;
+    margin: 20px;
+}
+.removebtn {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 0.5px solid white;
+    border-radius: 8px;
+    width: 13rem;
+    margin: 10px;
+}
+.removebtn:hover {
+    background-color: teal;
+}

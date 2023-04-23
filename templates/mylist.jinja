@@ -1,0 +1,23 @@
+{% extends 'main.jinja'%}
+
+{% block mypage %}
+
+    <div class="mylist">
+        <h3 class="section-title">My books</h3>
+        {% for book in mybooks %}
+        <div class="book">
+            <img class="bookimg" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Placeholder_book.svg" alt="book cover">
+            <p><a href="/home/{{ book.title }}">{{book.title}}</a></p>
+            <p>Author: {{book.author}}</p>
+            <p>Genre: {{book.Genre}}</p>
+            <div class="book-form">
+            <form class="form_inline" action="/home/remove/{{ book.title }}" method="POST">
+                <input class ="removebtn" type="submit" value="Remove">
+            </form>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+{% endblock %}
+
+

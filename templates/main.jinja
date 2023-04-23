@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>{{ title }} library</title>
+</head>
+    <header>
+            <a id="logoname" href="/home"><b>My Library</b></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/home/mylist">My Lists</a></li>
+
+            </ul>
+        </nav>
+        {# <a class="cta" href="#"><button>Register</button></a>
+        <a class="cta" href="#"><button>Log in</button></a> #}
+  
+    </header>
+    {% block mypage%}
+    {% endblock %}
+    <body>
+    {% block homepage%}
+    {% endblock %}
+    {% block bookpage %}
+    {% endblock %}
+
+    </body>
+    </html>

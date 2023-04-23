@@ -1,0 +1,38 @@
+{% extends 'main.jinja'%}
+
+{% block homepage %}
+{# Add book form #}
+    <div class="addbook-container">
+        <h3 class="section-title">Add book to library </h3>
+        <form class="form-inline" action="/home/add" method="post">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="title">
+            <label for="genre">Genre</label>
+            <input type="text" name="genre" id="date">
+            <label for="description">Description</label>
+            <textarea type="text" name="description" id="desc"></textarea>
+            <input id='sub-button' type="submit" value="Submit">
+        </form>
+    </div>
+    {# All books list #}
+    <div class="allbooks-list">
+        <h3 class="secton-title">All books</h3>
+        {% for book in books %}
+        <div class="book">
+            <img class="bookimg" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Placeholder_book.svg" alt="book cover">
+                <p><a href="/home/{{ book.title }}">{{book.title}}</a></p>
+                <p>Author: {{book.author}}</p>
+                <p>Genre: {{book.genre}}</p>
+                <form class="book-form" action="/home/book-action" method="POST">
+                    <input type="hidden" name="book_title" value="{{ book.title }}">
+                    <button type="submit" name="action" value="remove">Remove from library</button>
+                    <button type="submit" name="action" value="add_to_list">Add to My List</button>
+                </form>
+        </div>
+    </div>
+        {% endfor %}
+{% endblock %}
+
+
